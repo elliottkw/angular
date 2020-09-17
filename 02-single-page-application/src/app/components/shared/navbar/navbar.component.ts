@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../../../services/heroes.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  private heroesService: HeroesService;
+
+  constructor(heroesService: HeroesService) {
+    this.heroesService = heroesService;
+   }
 
   ngOnInit(): void {
+  }
+
+  public searchHeroe(searchText: string) {
+    // console.log(searchText);
+    console.log(this.heroesService.findHeroes(searchText));
   }
 
 }
