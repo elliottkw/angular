@@ -9,7 +9,8 @@ import { Heroe, HeroesService } from '../../services/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes: Heroe[] = [];
+  public heroes: Heroe[] = [];
+  
   private heroesService: HeroesService;
   private router: Router;
 
