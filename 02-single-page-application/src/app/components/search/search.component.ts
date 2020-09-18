@@ -34,4 +34,8 @@ export class SearchComponent implements OnInit {
     this.router.navigate(['/heroe', idx]);
   }
 
+  public findIndexInHeroes(heroe: Heroe) {
+    return this.heroesService.getHeroes().findIndex(hero => hero.nombre==heroe.nombre);
+  }
+
 }

@@ -3,6 +3,6 @@
 
 <div class="card-columns">
 
-    <app-heroe-card [heroe]="heroe" [idx]="i" *ngFor="let heroe of foundHeroes; let i = index;"></app-heroe-card>
+    <app-heroe-card (heroeSelected)="viewHeroe($event)" [heroe]="heroe" [idx]="findIndexInHeroes(heroe)" *ngFor="let heroe of foundHeroes"></app-heroe-card>
 
 </div>
